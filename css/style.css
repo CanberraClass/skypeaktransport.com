@@ -449,7 +449,7 @@ section.follow-area.clearfix {
 
 .loader {
     margin-top: -20px;
-    color: #da8c08;
+    color: #774e07;
     font-size: 6px;
     position: relative;
     -webkit-transform: translateZ(0);
@@ -894,6 +894,7 @@ section.follow-area.clearfix {
 #hero {
     width: 100%;
     height: 100vh;
+    background: url("../pic/bg/hero-bg.png") top right no-repeat;
     position: relative;
     overflow: hidden;
 }
