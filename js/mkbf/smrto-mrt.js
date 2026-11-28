@@ -1,36 +1,3 @@
-const darkThemeOptions = {
-    scales: {
-        x: {
-            ticks: {
-                color: '#ffffff' // X-axis labels color
-            },
-            grid: {
-                color: '#444444' // X-axis grid lines color
-            }
-        },
-        y: {
-            ticks: {
-                color: '#ffffff' // Y-axis labels color
-            },
-            grid: {
-                color: '#444444' // Y-axis grid lines color
-            }
-        }
-    },
-    plugins: {
-        legend: {
-            labels: {
-                color: '#ffffff' // Legend labels color
-            }
-        },
-        tooltip: {
-            backgroundColor: '#333333', // Tooltip background color
-            titleColor: '#ffffff', // Tooltip title color
-            bodyColor: '#ffffff' // Tooltip body color
-        }
-    }
-};
-
 const smrtMRT = document.getElementById('mkbf-smrt-mrt').getContext('2d');
 const chartOptions = {
     responsive: true,
@@ -50,10 +17,19 @@ const chartOptions = {
 const linesmrt = new Chart(smrtMRT, {
     type: 'line', // or 'bar', 'pie', etc.
     data: {
-        labels: ["2020", "2021", "2022", "2023", "2024"],
+        labels: ["2020", "2021", "2022", "2023", "2024", "2025", "Bef 27 Sep 2026", "Aft 27 Sep 2026"],
         datasets: [{
+            label: "SKL",
+            data: [0, 1022000, 2452000, 4482000, 8530000, 12713000, 24173600, 0],
+            borderColor: 'rgb(123, 58, 10)',
+            fill: true,
+            backgroundColor: 'rgba(112, 133, 115,0.05)',
+            borderWidth: 3
+        },
+
+        {
             label: "HBL",
-            data: [1082000, 2045000, 3075000, 3675000, 4951000],
+            data: [0, 0, 0, 0, 4951000, 5912000, 6918000, 0],
             borderColor: 'rgb(255, 187, 0)',
             fill: true,
             backgroundColor: 'rgba(207, 61, 61,0.05)',
@@ -61,17 +37,8 @@ const linesmrt = new Chart(smrtMRT, {
         },
 
         {
-            label: "CGL",
-            data: [3363000, 2027000, 3020000, 3200000, 4450000],
-            borderColor: 'rgb(0, 154, 68)',
-            fill: true,
-            backgroundColor: 'rgba(0, 154, 68,0.05)',
-            borderWidth: 3
-        },
-
-        {
             label: "AEL",
-            data: [2365000, 3420000, 3802000, 3721000, 4750000],
+            data: [0, 0, 0, 0, 4475000, 5512200, 6610200, 0],
             borderColor: 'rgb(39, 39, 157)',
             fill: true,
             backgroundColor: 'rgba(39, 39, 157,0.05)',
@@ -80,7 +47,7 @@ const linesmrt = new Chart(smrtMRT, {
 
         {
             label: "NWL",
-            data: [1733000, 1826000, 1840000, 1209000, 3210000],
+            data: [0, 0, 0, 3210000, 4510000, 8291200, 12349000, 0],
             borderColor: 'rgb(14, 103, 44)',
             fill: true,
             backgroundColor: 'rgba(14, 103, 44,0.05)',
@@ -89,7 +56,7 @@ const linesmrt = new Chart(smrtMRT, {
 
         {
             label: "YSLRT",
-            data: [1131000, 2224000, 2452000, 2482000, 4530000],
+            data: [0, 0, 0, 0, 4530000, 8936100, 16222000, 0],
             borderColor: 'rgb(112, 133, 115)',
             fill: true,
             backgroundColor: 'rgba(112, 133, 115,0.05)',
